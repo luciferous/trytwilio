@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+<link rel="stylesheet/less" href="/css/main.less" type="text/css">
+<script type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+<script type="text/javascript" src="/js/term.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $("#term").jterm()
+      .jterm("print", "Type 'help' for instructions.\n")
+      .jterm("print", "Type 'tutorial' for a tutorial.\n")
+      .jterm("print", "\n$ ")
+  });
+</script>
+{% endblock %}
+
+{% block title %}Try Twilio!{% endblock %}
+
+{% block content %}
+<h1>Try Twilio!</h1>
+<div id="term"><h2>Terminal failed to load.</h2></div>
+{% endblock %}
